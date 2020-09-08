@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Андрей Колодица](https://up.htmlacademy.ru/htmlcss/29/user/1573811).
-* Наставник: `Неизвестно`.
+* Наставник: [Борис Слонов](https://htmlacademy.ru/profile/slonov_boris)
 
 ---
 
