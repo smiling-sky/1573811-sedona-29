@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML Academy: Гостиницы Седоны</title>
+    <!-- узнать куда должны отправляться формы -->
+    <form action="#" method="post"></form>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="blank.html">Информация</a></li>
+          <li><a href="blank.html">Фото и видео</a></li>
+        </ul>
+        <a href="index.html">
+          <img
+            src="img/logo.svg"
+            alt='логотип сайта "Cедона"'
+            width="138"
+            height="70"
+          />
+        </a>
+        <ul>
+          <li><a href="blank.html">Карта штата</a></li>
+          <!-- проверить кликабельность кнопки -->
+          <li><a href="hotels.html" onclick="return false">Гостиницы</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 hidden>Гостиницы Седоны</h1>
+      <section>
+        <!-- заголовок фильтра скрыть -->
+        <h2 hidden>фильтр</h2>
+        <div>
+          Инфраструктура:
+          <input type="checkbox" name="pool" id="pool" checked />Бассейн
+          <input type="checkbox" name="parking" id="parking" />Парковка
+          <input type="checkbox" name="Wi-Fi" id="Wi-Fi" />Wi-Fi
+        </div>
+        <div>
+          Тип жилья:
+          <input type="checkbox" name="hotel" id="hotel" checked />Гостиница
+          <input type="checkbox" name="motel" id="motel" checked />Мотель
+          <input
+            type="checkbox"
+            name="Apartments"
+            id="Apartments"
+            checked
+          />Апартаменты
+        </div>
+        <div>
+          Стоимость в сутки (Р):
+          <!-- здесь два ползунка в одном поле и два вывода значения -->
+          <input type="range" name="cost" id="cost" min="0" max="3500" />
+          <!-- кнопка показать относится ко всему фильтру, а не к одному ползунку, надо придумать как все это связать -->
+          <button type="button">ПОКАЗАТЬ</button>
+        </div>
+      </section>
+      <section>
+        <h2 hidden>результаты фильтра</h2>
+        <div>
+          <h2>Найдено: 3</h2>
+          <!-- разобраться со списком -->
+          <ul>
+            <li>Сортировка:</li>
+            <li>По цене</li>
+            <li>По типу</li>
+            <li>По рейтингу</li>
+          </ul>
+        </div>
+        <div>
+          <!-- надо разобраться со звездами рейтинга -->
+          <!-- сомнения с правельностью и логикой разметки и кнопок -->
+          <div>
+            <img
+              src="img/hotel1.svg"
+              alt="Amara Resort & Spa"
+              width="135"
+              height="90"
+            />
+            <h2>Amara Resort & Spa</h2>
+            <p>Гостиница</p>
+            <p>От 4000 Р.</p>
+            <p>Рейтинг: 8,5</p>
+            <button type="button"><a href="blank.html">ПОДРОБНЕЕ</a></button>
+            <button type="button">
+              <a href="blank.html">ЗАБРОНИРОВАТЬ</a>
+            </button>
+          </div>
+          <div>
+            <img
+              src="img/hotel2.svg"
+              alt="Desert Quail Inn"
+              width="135"
+              height="90"
+            />
+            <h2>Desert Quail Inn</h2>
+            <p>Мотель</p>
+            <p>От 3000 Р.</p>
+            <p>Рейтинг: 8,9</p>
+            <button type="button"><a href="blank.html">ПОДРОБНЕЕ</a></button>
+            <button type="button">
+              <a href="blank.html">ЗАБРОНИРОВАТЬ</a>
+            </button>
+          </div>
+          <div>
+            <img
+              src="img/hotel3.svg"
+              alt="Villas at Poco Diablo"
+              width="135"
+              height="90"
+            />
+            <h2>Villas at Poco Diablo</h2>
+            <p>Апартаменты</p>
+            <p>От 2000 Р.</p>
+            <p>Рейтинг: 9,2</p>
+            <button type="button"><a href="blank.html">ПОДРОБНЕЕ</a></button>
+            <button type="button">
+              <a href="blank.html">ЗАБРОНИРОВАТЬ</a>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section>
+        <h3 hidden>контактные данные</h3>
+        <p>#visitSEDONA</p>
+        <p>ТЕЛ: +7(495) 666-01-66</p>
+      </section>
+      <section>
+        <h3 hidden>соц.сети</h3>
+        <ul>
+          <li><a href="#"><img src="img/twitter-icon.svg" alt="twitter"></a></li>
+          <li><a href="#"><img src="img/fb-icon.svg" alt="fb"></a></li>
+          <li><a href="#"><img src="img/youtube-icon.svg" alt="youtube"></a></li>
+        </ul>
+      </section>
+      <p>
+        Website by<a href="https://htmlacademy.ru/intensive/htmlcss"
+          ><img
+            src="img/logo-htmlacademy.svg"
+            width="115"
+            height="41"
+            alt="логотип htmlacademy"
+        /></a>
+      </p>
+    </footer>
+  </body>
+</html>
