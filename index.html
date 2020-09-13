@@ -12,87 +12,58 @@
           <li><a href="blank.html">Фото и видео</a></li>
         </ul>
         <a>
-          <img
-            src="img/logo.svg"
-            alt='логотип сайта "Cедона"'
-            width="138"
-            height="70"
-          />
+          <img src="img/logo.svg" alt='логотип сайта "Cедона"' />
         </a>
         <ul>
           <li><a href="blank.html">Карта штата</a></li>
           <li><a href="hotels.html">Гостиницы</a></li>
         </ul>
-        <section>
-          <!-- заголовок надо скрыть -->
-          <h2 hidden>welcom to the georgeous sedona</h2>
-          <img
-            src="img/shape-1.svg"
-            alt="welcom"
-            width="187.74"
-            height="44.75"
-          />
-          <img
-            src="img/Shape-2.svg"
-            alt="georgeous"
-            width="255.95"
-            height="28.8"
-          />
-          <!-- следующее изображение белое на белом фоне -->
-          <img
-            src="img/Shape-3.svg"
-            alt="grand_canyon"
-            width="456.65"
-            height="213.03"
-          />
-          <!-- изображение гор скорее всего фоновое изображения, но тогда я не знаю как сделать с низу -->
-        </section>
       </nav>
     </header>
     <main>
-      <!--по моему мнению надо здесь сделать так, хоть я и не уверен -->
-      <!-- Заголовок h1  надо будет скрыть -->
-      <h1 hidden>Седона — небольшой городок в Аризоне</h1>
-      <section>
-        <h2>Седона — небольшой городок в Аризоне,заслуживающий большего!</h2>
+      <div>
+        <!-- !!перенес с шапки в меин и поменя секшн на див -->
+        <!-- заголовок надо скрыть -->
+        <h2 hidden>welcom to the georgeous sedona</h2>
+        <img src="img/shape-1.svg" alt="welcom" />
+        <img src="img/Shape-2.svg" alt="georgeous" />
+        <!-- следующее изображение белое на белом фоне -->
+        <img src="img/Shape-3.svg" alt="grand_canyon" />
+        <!-- изображение гор скорее всего фоновое изображения, но тогда я не знаю как сделать снизу вырез -->
+      </div>
+      <div>
+        <!-- разобрался с заголовками -->
+        <h1>Седона — небольшой городок в Аризоне,заслуживающий большего!</h1>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-      </section>
+      </div>
       <section>
         <h2 hidden>о городке</h2>
         <article>
           <div>
-            <div>
-              <h2>Настоящий городок</h2>
-              <p>— №1 —</p>
-              <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
-              <!-- все это оборачивается в синий фон -->
-            </div>
-            <div>
-              <img
-                src="img/image1.jpg"
-                alt="фото городка"
-                width="800"
-                height="256"
-              />
-            </div>
+           <div><!-- ОБЕРНУЛ В ДИВ 43-53 И ПОУДАЛЯЛ РАЗМЕРЫ ИМГ -->
+              <div>
+                <h2>Настоящий городок</h2>
+                <p>— №1 —</p>
+                <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+                <!-- все это оборачивается в синий фон -->
+              </div>
+              <div>
+                <img src="img/image1.jpg" alt="фото городка" />
+              </div>
+           </div>
             <ul>
               <li>
-                <img src="img/icon-1.svg" alt="дом" height="72" width="75" />
+                <img src="img/icon-1.svg" alt="дом" />
                 <h2>Жильё</h2>
                 <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
               <li>
-                <img src="img/icon-2.svg" alt="бургер" width="75" height="70" />
+                <img src="img/icon-2.svg" alt="бургер" />
                 <h2>Еда</h2>
                 <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
               <li>
-                <img
-                  src="img/icon-3.svg"
-                  alt="сувенир"
-                  width="64"
-                  height="77"
-                />
+                <img src="img/icon-3.svg" alt="сувенир" />
                 <h2>Сувениры</h2>
                 <p>Не только китайского, но и местного производства!</p>
               </li>
@@ -101,13 +72,16 @@
         </article>
         <article>
           <div>
-            <div>
-              <img src="img/image2.jpg" alt="каньон" width="800" height="256" />
-            </div>
-            <div><!-- синий фон -->
-              <h2>Там есть Мост дьявола</h2>
-              <p>— №2 —</p>
-              <p>Да, по нему можно пройти! Если конечновы осмелитесь</p>
+            <div><!-- так же обернул в див 75-85и удалил размеры имг -->
+              <div>
+                <img src="img/image2.jpg" alt="каньон" />
+              </div>
+              <div>
+                <!-- синий фон -->
+                <h2>Там есть Мост дьявола</h2>
+                <p>— №2 —</p>
+                <p>Да, по нему можно пройти! Если конечновы осмелитесь</p>
+              </div>
             </div>
             <ul>
               <li>
@@ -129,30 +103,37 @@
           </div>
         </article>
       </section>
-      <section>
+      <div><!-- заменил на див -->
         <p>
           <strong>Заинтересовались?</strong>Укажите предполагаемые даты поездки,
           и мы покажем вам лучшие предложения гостиниц в седоне
         </p>
-        <button type="button">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</button>
+        <!-- будущая шапка формы -->
+        ПОИСК ГОСТИНИЦЫ В СЕДОНЕ
         <!-- под кнопкой должен открыватьсь popup с поиском -->
         <!--карта местности -->
-      </section>
+      </div>
     </main>
     <footer>
-      <section>
-        <h3 hidden>контактные данные</h3>
+      <div>
+        <h3 >контактные данные</h3>
         <p>#visitSEDONA</p>
         <p>ТЕЛ: +7(495) 666-01-66</p>
-      </section>
-      <section>
-        <h3 hidden>соц.сети</h3>
+      </div>
+      <div>
+        <h3>соц.сети</h3>
         <ul>
-          <li><a href="#"><img src="img/twitter-icon.svg" alt="twitter"></a></li>
-          <li><a href="#"><img src="img/fb-icon.svg" alt="fb"></a></li>
-          <li><a href="#"><img src="img/youtube-icon.svg" alt="youtube"></a></li>
+          <li>
+            <a href="#"><img src="img/twitter-icon.svg" alt="twitter" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="img/fb-icon.svg" alt="fb" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="img/youtube-icon.svg" alt="youtube" /></a>
+          </li>
         </ul>
-      </section>
+      </div>
       <p>
         Website by<a href="https://htmlacademy.ru/intensive/htmlcss"
           ><img
