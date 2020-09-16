@@ -1,0 +1,136 @@
+/* корневые цвета */
+:root {
+  --basic-white: #ffffff;
+  --basic-black: #000000;
+  --basic-black-light: #333333;
+  --basic-blue-light: #81b3d2;
+  --basic-gray-light: #eeeeee;
+  --basic-brown: #766357;
+  --basic-color-footer: rgba(255, 255, 255, 0.9);
+}
+
+body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: var(--basic-black-light);
+  text-transform: uppercase;
+  /* надо ли добавить фоновый цвет для отображения текста если изображения не загрузятся? */
+}
+/* убираю у ссылок подчеркивания */
+.page a {
+  text-decoration: none;
+}
+.page li {
+  list-style: none;
+}
+/* заполнение изображением контейнера */
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* почему не становится черным текст */
+.main-navigation {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  color: var(--basic-black);
+}
+.site-navigation {
+  color: var(--basic-black);
+}
+.site-navigation a {
+  color: var(--basic-black);
+}
+/* стилизуем заголовок*/
+.main-title {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+  align-items: center;
+  text-align: center;
+}
+.main-title > h1 {
+  font-weight: bold;
+  font-size: 21px;
+  color: var(--basic-black);
+}
+.main-text-description {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  align-items: center;
+  text-align: center;
+  color: var(--basic-white);
+  background-color: var(--basic-blue-light);
+}
+.main-text-description h2 {
+  font-weight: bold;
+  font-size: 21px;
+}
+/* списки */
+.description-list {
+}
+.description-item {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  align-items: center;
+  text-align: center;
+}
+.description-item h2 {
+  font-weight: bold;
+  font-size: 21px;
+}
+.wrap {
+  background-color: var(--basic-gray-light);
+}
+
+/* разобраться с этим пунктом? напрягает размер и группировка текста если брать макет */
+.offer-service {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 24px;
+  align-items: center;
+  text-align: center;
+}
+/* кнопки */
+.button-search {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  align-items: center;
+  text-align: center;
+  background-color: var(--basic-brown);
+  color: var(--basic-white);
+}
+.button-popup {
+  color: var(--basic-white);
+  font-size: 21px;
+  line-height: 26px;
+  align-items: center;
+  text-align: center;
+  background-color: var(--basic-blue-light);
+}
+/* активные кнопки */
+/* footer */
+.main-footer {
+  background-color: var(--basic-color-footer);
+}
+.footer-contacts {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+}
+.footer-social {
+  text-align: center;
+}
+.footer-copyright {
+  text-align: center;
+}
+/* состояние интерактивных элементов */
