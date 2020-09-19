@@ -9,6 +9,8 @@
     />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <!-- добавил форму для инпутов -->
+    <form action="#" method="post"></form>
   </head>
   <body class="page-body">
     <header class="main-header">
@@ -35,14 +37,14 @@
         <img src="img/Shape-3.svg" alt="grand_canyon" />
       </div>
       <div class="main-title">
-        <!-- выровнять по центру и попробовать поиграть со шрифтами -->
-        <h1>Седона — небольшой городок в Аризоне,<br />заслуживающий большего!</h1>
+        <h1>
+          Седона — небольшой городок в Аризоне,<br />заслуживающий большего!
+        </h1>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </div>
       <section class="description">
         <h2 hidden>о городке</h2>
         <div>
-          <!-- борис, подскажи, нужен ли мне 40  и 73 дивы если следующие дивы выполняют их функцию -->
           <div class="description-conteiner">
             <div class="text-image-description">
               <div class="main-text-description">
@@ -114,19 +116,28 @@
       </section>
       <div class="offer-service">
         <!--  я немогу понять как работать с этим дивом в css. не могу достичь резульатат как в макете -->
-          <p>
-          <strong>Заинтересовались?</strong>Укажите предполагаемые даты поездки,
-          и мы покажем вам лучшие предложения гостиниц в седоне
-        </p>
+        <h2>
+          <span>Заинтересовались</span> <br />
+          <span
+            >Укажите предполагаемые даты поездки,<br />
+            и мы покажем вам лучшие предложения гостиниц в седоне</span
+          >
+        </h2>
         <!-- удалил кнопку и тут будущая шапка формы -->
         <button class="button-search">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</button>
-         <!-- под кнопкой должен открываться popup с поиском -->
+        <!-- под кнопкой должен открываться popup с поиском -->
         <div class="popup">
           <h2 hidden>поиск гостиницы в седоне</h2>
-          <!-- Здесь будут инпуты -->
+          <div class="popup-form">
+            <div>дата заезда <input type="date" name="arrival" /></div>
+            <div>дата выезда <input type="date" name="departure" /></div>
+            <div>взрослые <input type="number" name="adult" min="0" /></div>
+            <div>дети <input type="number" name="children" min="0" /></div>
+          </div>
           <button type="button" class="button-popup">найти</button>
         </div>
         <!--карта местности -->
+        <!-- <img src="" alt=""> -->
       </div>
     </main>
     <footer class="main-footer">

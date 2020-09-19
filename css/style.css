@@ -7,6 +7,30 @@
   --basic-gray-light: #eeeeee;
   --basic-brown: #766357;
   --basic-color-footer: rgba(255, 255, 255, 0.9);
+
+
+  /* цвета для интерактивных действий */
+
+  /* покой*/
+  --rest-black-rgb: rgba(0, 0, 0, 0.3);
+  --rest-input: #F2F2F2;
+  --rest-icon-calendar:#A9A9A9;
+  /* для треугольников */
+  --rest-triangle: #cacaca;
+
+  /* наведение */
+  --hover-btn-blue: #669ec0;
+  --hover-btn-brown: #604e43;
+  --hover-text-blue: #81B3D2;
+  --hover-input:#EBEBEB;
+
+  /* нажатие */
+  --activ-btn-blue: #5496BD;;
+  --activ-btn-brown: #503E33;
+  --activ-text:  rgba(0, 0, 0, 0.3);
+
+  /* фокус */
+  --focus-input: #ffffff ;
 }
 
 body {
@@ -19,13 +43,12 @@ body {
   font-weight: normal;
   color: var(--basic-black-light);
   text-transform: uppercase;
-  /* надо ли добавить фоновый цвет для отображения текста если изображения не загрузятся? */
 }
-/* убираю у ссылок подчеркивания */
+/* убираю у ссылок подчеркивания и булеты списков */
 .page a {
   text-decoration: none;
 }
-.page li {
+.page ul {
   list-style: none;
 }
 /* заполнение изображением контейнера */
@@ -33,20 +56,29 @@ img {
   max-width: 100%;
   height: auto;
 }
-/* почему не становится черным текст */
+
+/* навигация  в шапке */
 .main-navigation {
   font-size: 14px;
   line-height: 26px;
   font-weight: bold;
   color: var(--basic-black);
 }
-.site-navigation {
-  color: var(--basic-black);
-}
+
+/* .site-navigation {
+} */
+
 .site-navigation a {
   color: var(--basic-black);
 }
+
 /* стилизуем заголовок*/
+.image-preview-welcome {
+  background-color: var(--basic-gray-light);
+  /* правило для фонового изображения background-image: ; */
+}
+/* основной контент */
+
 .main-title {
   font-weight: normal;
   font-size: 14px;
@@ -72,9 +104,10 @@ img {
   font-weight: bold;
   font-size: 21px;
 }
+
 /* списки */
-.description-list {
-}
+/* .description-list {
+} */
 .description-item {
   font-weight: normal;
   font-size: 14px;
@@ -90,15 +123,23 @@ img {
   background-color: var(--basic-gray-light);
 }
 
-/* разобраться с этим пунктом? напрягает размер и группировка текста если брать макет */
+/* настроить межтрочный интервал между двумя спанами*/
 .offer-service {
-  font-weight: bold;
-  font-size: 30px;
-  line-height: 24px;
+  font-size: 14px;
   align-items: center;
   text-align: center;
 }
-/* кнопки */
+.offer-service h2 span:first-child {
+  font-size: 30px;
+  line-height: 50px;
+}
+.offer-service h2 span:last-child {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/* кнопки  и попап*/
 .button-search {
   font-weight: bold;
   font-size: 21px;
@@ -115,6 +156,12 @@ img {
   align-items: center;
   text-align: center;
   background-color: var(--basic-blue-light);
+}
+/* добавил стили к тексту в попап */
+.popup-form {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
 }
 /* активные кнопки */
 /* footer */
