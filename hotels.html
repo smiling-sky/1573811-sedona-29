@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8" />
-    <title>HTML Academy: Гостиницы Седоны</title>
-    <!-- узнать куда должны отправляться формы -->
+    <title>HTML Academy:Гостиницы  Седоны</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <form action="#" method="post"></form>
   </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
+  <body class="page-body">
+    <header  class="main-header">
+      <nav class="main-navigation">
+        <ul class="site-navigation site-navigation-first">
           <li><a href="blank.html">Информация</a></li>
           <li><a href="blank.html">Фото и видео</a></li>
         </ul>
-        <a href="index.html">
+        <a class="main-header-logo" href="index.html">
           <img
             src="img/logo.svg"
             alt='логотип сайта "Cедона"'
@@ -21,10 +26,9 @@
             height="70"
           />
         </a>
-        <ul>
+        <ul class="site-navigation site-navigation-second">
           <li><a href="blank.html">Карта штата</a></li>
-          <!-- проверить кликабельность кнопки -->
-          <li><a href="hotels.html" onclick="return false">Гостиницы</a></li>
+          <li><a href="hotels.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -75,7 +79,7 @@
           <!-- сомнения с правельностью и логикой разметки и кнопок -->
           <div>
             <img
-              src="img/hotel1.svg"
+              src="img/hotel1.png "
               alt="Amara Resort & Spa"
               width="135"
               height="90"
@@ -91,7 +95,7 @@
           </div>
           <div>
             <img
-              src="img/hotel2.svg"
+              src="img/hotel2.png"
               alt="Desert Quail Inn"
               width="135"
               height="90"
@@ -107,7 +111,7 @@
           </div>
           <div>
             <img
-              src="img/hotel3.svg"
+              src="img/hotel3.png"
               alt="Villas at Poco Diablo"
               width="135"
               height="90"
@@ -124,29 +128,46 @@
         </div>
       </section>
     </main>
-    <footer>
-      <section>
-        <h3 hidden>контактные данные</h3>
+    <footer class="main-footer">
+      <div class="footer-contacts">
+        <h3>контактные данные</h3>
         <p>#visitSEDONA</p>
         <p>ТЕЛ: +7(495) 666-01-66</p>
-      </section>
-      <section>
-        <h3 hidden>соц.сети</h3>
+      </div>
+      <div class="footer-social">
+        <h3>соц.сети</h3>
         <ul>
-          <li><a href="#"><img src="img/twitter-icon.svg" alt="twitter"></a></li>
-          <li><a href="#"><img src="img/fb-icon.svg" alt="fb"></a></li>
-          <li><a href="#"><img src="img/youtube-icon.svg" alt="youtube"></a></li>
+          <li>
+            <a class="social-button" href="#"
+              ><img src="img/twitter-icon.svg" alt="twitter"
+            /></a>
+          </li>
+          <li>
+            <a class="social-button" href="#"
+              ><img src="img/fb-icon.svg" alt="fb"
+            /></a>
+          </li>
+          <li>
+            <a class="social-button" href="#"
+              ><img src="img/youtube-icon.svg" alt="youtube"
+            /></a>
+          </li>
         </ul>
-      </section>
-      <p>
-        Website by<a href="https://htmlacademy.ru/intensive/htmlcss"
-          ><img
-            src="img/logo-htmlacademy.svg"
-            width="115"
-            height="41"
-            alt="логотип htmlacademy"
-        /></a>
-      </p>
+      </div>
+      <div class="footer-copyright">
+        <p>
+          Website by<a
+            class="copyright-link"
+            href="https://htmlacademy.ru/intensive/htmlcss"
+            ><img
+              src="img/logo-htmlacademy.svg"
+              width="115"
+              height="41"
+              alt="логотип htmlacademy"
+          /></a>
+        </p>
+      </div>
     </footer>
   </body>
 </html>
+
