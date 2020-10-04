@@ -9,8 +9,6 @@
     />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <!-- добавил форму для инпутов -->
-    <form action="#" method="post"></form>
   </head>
   <body class="page-body">
     <header class="main-header">
@@ -20,7 +18,12 @@
           <li><a href="blank.html">Фото и видео</a></li>
         </ul>
         <a class="main-header-logo">
-          <img src="img/logo.svg" alt='логотип сайта "Cедона"' />
+          <img
+            src="img/logo.png"
+            alt='логотип сайта "Cедона"'
+            width="138"
+            height="70"
+          />
         </a>
         <ul class="site-navigation site-navigation-second">
           <li><a href="blank.html">Карта штата</a></li>
@@ -29,31 +32,11 @@
       </nav>
     </header>
     <main class="conteiner">
-<div class="preview-wrap">
+      <div class="preview-wrap">
         <div class="image-preview-welcome">
           <!-- класс для размещения изображений и использования фонового изображения -->
           <h2 hidden>welcom to the georgeous sedona</h2>
-          <img
-            src="img/shape-1.svg"
-            alt="welcom"
-            width="
-          187,74px"
-            height="44,75px"
-          />
-          <img
-            src="img/Shape-2.svg"
-            alt="georgeous"
-            width="
-          255,95px
-          "
-            height="28,8px"
-          />
-          <img
-            src="img/Shape-3.svg"
-            alt="grand_canyon"
-            width="456,65px"
-            height="213,03px"
-          />
+          <img src="img/welcome.png" alt="welcom" width="457" height="351" />
         </div>
         <div class="main-title">
           <h1>
@@ -61,74 +44,136 @@
           </h1>
           <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </div>
-</div>
+      </div>
       <section class="description">
         <h2 hidden>о городке</h2>
         <div>
           <div class="description-conteiner">
-            <div class="text-image-description">
+            <div class="text-image-description text-image-description-first">
               <div class="main-text-description">
-                <h2>Настоящий городок</h2>
+                <h2>Настоящий <br> городок</h2>
                 <p>— №1 —</p>
-                <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+                <p>
+                  Седона - не аттракцион для туристов, там <br />
+                  течёт своя жизнь
+                </p>
                 <!-- все это оборачивается в синий фон -->
               </div>
               <div class="image-description">
-                <img src="img/image1.png" alt="фото городка" width="800px" height="256px" />
+                <img
+                  src="img/image1.jpg"
+                  alt="фото городка"
+                  width="800"
+                  height="256"
+                />
               </div>
             </div>
-            <ul class="description-list">
-              <!-- добавил класс для свг картинок, ПРЕДПОЛОГАЮ что я буду что-то с этим делать -->
-              <!-- изображения ниже считаются декоративными? -->
+            <ul class="description-list description-list-first">
               <li class="description-item">
-                <img class="picture" src="img/icon-1.svg" alt="дом" />
+                <img
+                  class="picture"
+                  src="img/icon-1.svg"
+                  alt="дом"
+                  width="75"
+                  height="72"
+                />
                 <h2>Жильё</h2>
-                <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                <p>
+                  Рекомендуем пожить в настоящем <br />
+                  мотеле, всё как в кино!
+                </p>
               </li>
               <li class="description-item">
-                <img class="picture" src="img/icon-2.svg" alt="бургер" />
+                <img
+                  class="picture"
+                  src="img/icon-2.svg"
+                  alt="бургер"
+                  width="75"
+                  height="70"
+                />
                 <h2>Еда</h2>
-                <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                <p>
+                  Всегда заказывайте фирменный бургер, <br />
+                  вы не разочаруетесь!
+                </p>
               </li>
               <li class="description-item">
-                <img class="picture" src="img/icon-3.svg" alt="сувенир" />
+                <img
+                  class="picture"
+                  src="img/icon-3.svg"
+                  alt="сувенир"
+                  width="64"
+                  height="77"
+                />
                 <h2>Сувениры</h2>
-                <p>Не только китайского, но и местного производства!</p>
+                <p>
+                  Не только китайского, но и местного <br />
+                  производства!
+                </p>
               </li>
             </ul>
           </div>
         </div>
         <div>
           <div class="description-conteiner">
-            <div class="text-image-description">
+            <div class="text-image-description text-image-description-second">
               <!-- так же обернул в див 75-85и удалил размеры имг -->
               <div class="image-description">
-                <img src="img/image2.jpg" alt="каньон" width="800px" height="256px"/>
+                <img
+                  src="img/image2.jpg"
+                  alt="каньон"
+                  width="800"
+                  height="256"
+                />
               </div>
               <div class="main-text-description">
                 <!-- синий фон -->
-                <h2>Там есть Мост дьявола</h2>
+                <h2>
+                  Там есть <br />
+                  Мост дьявола
+                </h2>
                 <p>— №2 —</p>
-                <p>Да, по нему можно пройти! Если конечновы осмелитесь</p>
+                <p>
+                  Да, по нему можно пройти! Если конечно <br />
+                  вы осмелитесь
+                </p>
               </div>
             </div>
             <!--обернул этот список в див чтобы задать фон -->
             <div class="wrap">
-              <ul class="description-list">
+              <ul class="description-list description-list-second">
                 <li class="description-item">
-                  <h2>небольшая площадь</h2>
+                  <h2>
+                    небольшая <br />
+                    площадь
+                  </h2>
                   <p>— №3 —</p>
-                  <p>все достопримечательности находятся очень близко</p>
+                  <p>
+                    все достопримечательности <br />
+                    находятся очень близко
+                  </p>
                 </li>
                 <li class="description-item">
-                  <h2>красивая дорога</h2>
+                  <h2>
+                    красивая <br />
+                    дорога
+                  </h2>
                   <p>— №4 —</p>
-                  <p>ехать в седону из лас-вегаса совсем не скучно!</p>
+                  <p>
+                    ехать в седону из лас-вегаса совсем <br />
+                    не скучно!
+                  </p>
                 </li>
                 <li class="description-item">
-                  <h2>мало туристов</h2>
+                  <h2>
+                    мало <br />
+                    туристов
+                  </h2>
                   <p>— №5 —</p>
-                  <p>большинство едет в гранд каньон и толпится там</p>
+                  <p>
+                    большинство едет в гранд каньон <br />
+                    и толпится там
+                  </p>
                 </li>
               </ul>
             </div>
@@ -145,45 +190,105 @@
           >
         </h2>
         <!-- удалил кнопку и тут будущая шапка формы -->
-        <button class="button-search">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</button>
-        <!-- под кнопкой должен открываться popup с поиском -->
-        <div class="popup">
+        <button class="button-offer" type="button">
+          Поиск гостиницы в седоне
+        </button>
+        <!--! под кнопкой должен открываться popup с поиском -->
+        <!--  <div class="modal">
           <h2 hidden>поиск гостиницы в седоне</h2>
-        <!--   <div class="popup-form">
-            <div>дата заезда <input type="date" name="arrival" /></div>
-            <div>дата выезда <input type="date" name="departure" /></div>
-            <div>взрослые <input type="number" name="adult" min="0" /></div>
-            <div>дети <input type="number" name="children" min="0" /></div>
-          </div>
-          <button type="button" class="button-popup">найти</button>
+         <div class="popup-form">
+          <form class="search-hotel-form" action="#" method="post">
+            <p class="search-hotel-item">
+              <label for="arrival-date">Дата заезда:</label>
+              <input id="arrival-date" type="text" name="date" placeholder="24 апреля 2017">
+            </p>
+            <p class="search-hotel-item">
+              <label for="date-of-departure">Дата выезда:</label>
+              <input id="date-of-departure" type="text" name="date" placeholder="4 июля 2017">
+            </p>
+            <p class="search-hotel-item">
+              <label for="adults">Взрослые:</label>
+              <input id="adults" type="text" name="adults" placeholder="2">
+            </p>
+            <p class="search-hotel-item">
+              <label for="children">Дети:</label>
+              <input id="children" type="text" name="adults" placeholder="0">
+            </p>
+            <button type="button" class="button-search">найти</button>
+          </form>
         </div> -->
         <!--карта местности -->
         <!-- <img src="" alt=""> -->
       </div>
+      <div class="map-img">
+        <img src="img/map.jpg" alt="карта" width="1200" height="594" />
+      </div>
     </main>
-    <footer class="main-footer">
+    <footer class="page-footer main-footer">
       <div class="footer-contacts">
-        <h3>контактные данные</h3>
+        <h3 class="visually-hidden">контактные данные</h3>
         <p>#visitSEDONA</p>
-        <p>ТЕЛ: +7(495) 666-01-66</p>
+        ТЕЛ:
+        <a class="footer-phone" href="tel:+74956660166">+7(495) 666-01-66</a>
       </div>
       <div class="footer-social">
-        <h3>соц.сети</h3>
-        <ul>
+        <h3 class="visually-hidden">соц.сети</h3>
+        <ul class="social-list">
           <li>
-            <a class="social-button" href="#"
-              ><img src="img/twitter-icon.svg" alt="twitter"
-            /></a>
+            <a class="social-button" href="#">
+              <span class="visually-hidden">twitter</span>
+              <svg
+                width="46"
+                height="48"
+                viewBox="0 0 46 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="46" height="48" fill="#81B3D2" />
+                <path
+                  d="M25.95 17.144C27.635 16.648 28.934 17.414 29.527 18.323C30.2 18.092 30.858 17.842 31.538 17.615C31.5249 18.3014 31.2117 18.9475 30.681 19.383C31.366 19.553 31.985 18.892 31.985 18.892C31.816 19.892 30.979 20.68 30.422 20.916C30.191 27.666 27.247 32.133 20.345 31.998H19.899C19.489 31.998 15.735 31.538 15.001 30.111C17.272 30.307 18.894 29.689 19.694 28.934C18.734 28.634 17.015 28.457 16.715 25.984C17.064 26.09 17.279 26.212 17.905 26.103C16.705 25.247 15.374 24.53 15.448 22.33C15.733 22.658 16.515 22.866 16.788 22.802C16.085 22.561 14.818 19.442 15.894 17.85C17.712 19.704 19.629 21.456 23.046 21.623C23.254 19.33 24.183 17.793 25.95 17.144Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
           </li>
           <li>
-            <a class="social-button" href="#"
-              ><img src="img/fb-icon.svg" alt="fb"
-            /></a>
+            <a class="social-button" href="#">
+              <span class="visually-hidden">facebook</span>
+              <svg
+                width="46"
+                height="48"
+                viewBox="0 0 46 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="46" height="48" fill="#81B3D2" />
+                <path
+                  d="M29 17V13H25C22.7909 13 21 14.7909 21 17V21H17V25H21V35H25V25H29V21H25V17H29Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
           </li>
           <li>
-            <a class="social-button" href="#"
-              ><img src="img/youtube-icon.svg" alt="youtube"
-            /></a>
+            <a class="social-button" href="#">
+              <span class="visually-hidden">youtube</span>
+              <svg
+                width="46"
+                height="48"
+                viewBox="0 0 46 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="46" height="48" fill="#81B3D2" />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M16 16H30C31.65 16 33 17.35 33 19V29C33 30.65 31.65 32 30 32H16C14.35 32 13 30.65 13 29V19C13 17.35 14.35 16 16 16ZM19.027 20.002V27.998L28.014 24L19.027 20.002Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
           </li>
         </ul>
       </div>
@@ -196,7 +301,7 @@
               src="img/logo-htmlacademy.svg"
               width="115"
               height="41"
-              alt="логотип htmlacademy"
+              alt="ссылка на htmlacademy"
           /></a>
         </p>
       </div>
