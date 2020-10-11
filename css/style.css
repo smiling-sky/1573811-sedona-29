@@ -397,6 +397,22 @@ img {
   margin-bottom: 30px;
 }
 
+.label-arrival-date {
+  margin-right: 21px;
+}
+
+.label-of-departure {
+  margin-right: 17px;
+}
+
+.label-adults {
+  margin-right: 38px;
+}
+
+.label-children {
+  margin-right: 22px;
+}
+
 .search-hotel-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -405,12 +421,14 @@ img {
   padding: 55px;
 }
 
-.placeholder:-moz-placeholder {
+input::-moz-placeholder {
   color: inherit;
+  text-transform: uppercase;
 }
 
 input::-webkit-input-placeholder {
   color: inherit;
+  text-transform: uppercase;
 }
 
 .input-1 {
@@ -446,17 +464,20 @@ input::-webkit-input-placeholder {
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
-
 }
 
 .minus {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 90px;
 }
 
 .plus {
   position: absolute;
   right: 13px;
-  top: 14px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .calendar:hover path,
@@ -479,7 +500,7 @@ input::-webkit-input-placeholder {
   border: 2px solid var(--rest-input);
   padding: 0;
   outline: none;
- }
+}
 
 .search-hotel-item input:hover {
   background-color: var(--hover-input);
@@ -496,12 +517,12 @@ input::-webkit-input-placeholder {
 }
 
 .search-hotel-item-big input {
-  width: 320px;
-  padding: 0 13px;
+  width: 345px;
+  padding: 0 10px;
 }
 
 .search-hotel-item-small input {
-  width:115px;
+  width: 115px;
   padding: 0 40px;
   text-align: center;
 }
@@ -557,12 +578,13 @@ input::-webkit-input-placeholder {
   font-size: 21px;
   line-height: 26px;
   text-align: center;
-  margin-top: 15px;
-  margin-left: 70px;
+  /* margin-top: 15px; */
+  margin-left: 72px;
 }
 
 .footer-contacts p {
   margin: 0;
+  margin-top: 16px;
   margin-bottom: 10px;
 }
 
@@ -605,26 +627,12 @@ input::-webkit-input-placeholder {
   fill: var(--activ-text-white);
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 .footer-copyright {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-right: 70px;
+  margin-right: 75px;
 }
 
 .footer-copyright p {
@@ -641,6 +649,20 @@ input::-webkit-input-placeholder {
   fill: var(--rest-icon-calendar);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .copyright-link {}
 
 /* ! внутренняя страница */
@@ -653,6 +675,7 @@ input::-webkit-input-placeholder {
   display: grid;
   grid-template-columns: 1fr 1fr 50%;
   background-color: gray;
+  overflow: hidden;
 }
 
 .example-blur {
@@ -676,7 +699,7 @@ input::-webkit-input-placeholder {
   line-height: 21px;
   align-items: center;
   color: var(--basic-white);
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .sorting-input p {
@@ -794,7 +817,7 @@ input::-webkit-input-placeholder {
   width: 3px;
   height: 3px;
   padding: 0;
-  border: 8px solid #ffffff;
+  border: 8px solid var(--basic-white);
   background-color: #ababab;
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 #cfcfcf;
@@ -809,6 +832,17 @@ input::-webkit-input-placeholder {
   left: 252px;
 }
 
+.toggle:hover {
+  transform: scale(1.2);
+}
+
+.price-controls {
+  border: 2px solid var(--basic-white);
+  box-sizing: border-box;
+  border-radius: 2px;
+  position: relative;
+}
+
 .price-controls label {
   text-transform: uppercase;
   font-size: 16px;
@@ -817,13 +851,34 @@ input::-webkit-input-placeholder {
 .price-controls input {
   font-family: inherit;
   font-size: inherit;
-  width: 132px;
+  width: 135px;
   padding: 6px 10px;
   text-align: center;
-  color: #ffffff;
-  border: 2px solid #ffffff;
+  color: var(--basic-white);
+  border: none;
   border-radius: 2px;
   background: transparent;
+}
+
+/* * убрал стрелочки в поле */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+/* *вертикальная граница */
+.price-controls::before {
+  content: "";
+  width: 2px;
+  height: 22px;
+  background-color: var(--basic-white);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .button-show {
@@ -833,7 +888,7 @@ input::-webkit-input-placeholder {
   padding: 6px 35px;
   text-align: center;
   background-color: transparent;
-  border: 2px solid #ffffff;
+  border: 2px solid var(--basic-white);
   border-radius: 2px;
   margin: 0;
   margin-left: 84px;
@@ -855,7 +910,7 @@ input::-webkit-input-placeholder {
   color: var(--basic-black);
   display: flex;
   justify-content: flex-start;
-  margin-top: 27px;
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 
@@ -1027,15 +1082,15 @@ input::-webkit-input-placeholder {
 
 
 /* !выровнять текст */
-.description-inner .more-details {
-  display: inline-block;
+.more-details {
+  box-sizing: border-box;
   width: 110px;
-  height: 27px;
+  height: max-content;
+  padding: 3px 0;
+  margin-top: 8px;
   text-align: center;
-  vertical-align: middle;
   color: var(--basic-white);
   background-color: var(--basic-blue-light);
-  margin-top: 8px;
 }
 
 .more-details:hover {
@@ -1047,15 +1102,15 @@ input::-webkit-input-placeholder {
   color: var(--activ-text-white);
 }
 
-.description-inner .reservation {
-  display: inline-block;
-  color: var(--basic-white);
+.reservation {
+  box-sizing: border-box;
   width: 142px;
-  height: 27px;
-  text-align: center;
-  vertical-align: middle;
-  background-color: var(--basic-brown);
+  height: max-content;
+  padding: 3px 0;
   margin-top: 8px;
+  text-align: center;
+  color: var(--basic-white);
+  background-color: var(--basic-brown);
 }
 
 .reservation:hover {
