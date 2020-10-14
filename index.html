@@ -30,9 +30,8 @@
   <main class="conteiner">
     <div class="preview-wrap">
       <div class="image-preview-welcome">
-        <!-- класс для размещения изображений и использования фонового изображения -->
         <h2 class="visually-hidden">welcom to the georgeous sedona</h2>
-        <img src="img/welcome.png" alt="welcom" width="457" height="351" />
+        <img src="img/welcome.png" alt="приглашение в город Седона" width="457" height="351" />
       </div>
       <div class="main-title">
         <h1>
@@ -56,7 +55,6 @@
                 Седона - не аттракцион для туристов, там <br />
                 течёт своя жизнь
               </p>
-              <!-- все это оборачивается в синий фон -->
             </div>
             <div class="image-description">
               <img src="img/image1.jpg" alt="фото городка" width="800" height="256" />
@@ -64,7 +62,7 @@
           </div>
           <ul class="description-list-first">
             <li class="description-item">
-              <img class="picture" src="img/icon-1.svg" alt="дом" width="75" height="72" />
+              <img class="picture" src="img/icon-1.svg" alt="мотели" width="75" height="72" />
               <h2>Жильё</h2>
               <p>
                 Рекомендуем пожить в настоящем <br />
@@ -72,7 +70,7 @@
               </p>
             </li>
             <li class="description-item">
-              <img class="picture" src="img/icon-2.svg" alt="бургер" width="75" height="70" />
+              <img class="picture" src="img/icon-2.svg" alt="фирменный бургер" width="75" height="70" />
               <h2>Еда</h2>
               <p>
                 Всегда заказывайте фирменный бургер, <br />
@@ -80,7 +78,7 @@
               </p>
             </li>
             <li class="description-item">
-              <img class="picture" src="img/icon-3.svg" alt="сувенир" width="64" height="77" />
+              <img class="picture" src="img/icon-3.svg" alt="местные сувениры" width="64" height="77" />
               <h2>Сувениры</h2>
               <p>
                 Не только китайского, но и местного <br />
@@ -93,12 +91,10 @@
       <div>
         <div class="description-conteiner">
           <div class="text-image-description text-image-description-second">
-            <!-- так же обернул в див 75-85и удалил размеры имг -->
             <div class="image-description">
-              <img src="img/image2.jpg" alt="каньон" width="800" height="256" />
+              <img src="img/image2.jpg" alt="зловещий каньон" width="800" height="256" />
             </div>
             <div class="main-text-description">
-              <!-- синий фон -->
               <h2>там есть <br />Мост дьявола</h2>
               <p>— №2 —</p>
               <p>
@@ -107,7 +103,6 @@
               </p>
             </div>
           </div>
-          <!--обернул этот список в див чтобы задать фон -->
           <div class="wrap">
             <ul class="description-list-second">
               <li class="description-item">
@@ -131,7 +126,6 @@
       </div>
     </section>
     <div class="offer-service">
-      <!--  я немогу понять как работать с этим дивом в css. не могу достичь резульатат как в макете -->
       <h2>
         <span>Заинтересовались?</span><br />
         <span>Укажите предполагаемые даты поездки,<br />и мы покажем вам лучшие
@@ -141,11 +135,10 @@
         <button class="button-offer" type="button">
           Поиск гостиницы в седоне
         </button>
-        <!--! под кнопкой должен открываться popup с поиском -->
-        <div class="modal">
+        <div class="modal ">
           <h2 class="visually-hidden">поиск гостиницы в седоне</h2>
-          <div class="popup-form">
-            <form class="search-hotel-form" action="#" method="post">
+          <div class="popup-form ">
+            <form class="search-hotel-form" action="blank.html" method="get">
               <p class="search-hotel-item search-hotel-item-big input-1">
                 <label class="label-arrival-date" for="arrival-date">Дата заезда:</label>
                 <input id="arrival-date" type="text" name="date" placeholder="24 АПРЕЛЯ 2017">
@@ -206,7 +199,7 @@
         </div>
       </div>
       <div class="map-img">
-        <img src="img/map.jpg" alt="карта" width="1200" height="594" />
+        <img src="img/map.jpg" alt="карта городка Седона" width="1200" height="594" />
       </div>
     </div>
   </main>
@@ -225,7 +218,8 @@
             <li>
               <a class="social-button" href="#">
                 <span class="visually-hidden">twitter</span>
-                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg aria-hidden="true" focusable="false" width="17" height="16" viewBox="0 0 17 16" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34501 15.9981H4.89901C4.48901 15.9981 0.735007 15.5381 0.00100708 14.1111C2.27201 14.3071 3.89401 13.6891 4.69401 12.9341C3.73401 12.6341 2.01501 12.4571 1.71501 9.98409C2.06401 10.0901 2.27901 10.2121 2.90501 10.1031C1.70501 9.24709 0.374007 8.53009 0.448007 6.33009C0.733007 6.65809 1.51501 6.86609 1.78801 6.80209C1.08501 6.56109 -0.181993 3.44209 0.894007 1.85009C2.71201 3.70409 4.62901 5.45609 8.04601 5.62309C8.25401 3.33009 9.18301 1.79309 10.95 1.14409Z"
                     fill="white" />
@@ -235,7 +229,8 @@
             <li>
               <a class="social-button" href="#">
                 <span class="visually-hidden">facebook</span>
-                <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg aria-hidden="true" focusable="false" width="12" height="22" viewBox="0 0 12 22" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white" />
                 </svg>
               </a>
@@ -243,7 +238,8 @@
             <li>
               <a class="social-button" href="#">
                 <span class="visually-hidden">youtube</span>
-                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg aria-hidden="true" focusable="false" width="20" height="16" viewBox="0 0 20 16" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z"
                     fill="white" />
@@ -265,6 +261,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/popup.js"></script>
 </body>
 
 </html>

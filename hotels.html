@@ -29,48 +29,50 @@
   </header>
   <main class="conteiner inner-conteiner">
     <h1 hidden>Гостиницы Седоны</h1>
-    <section class="sorting-wrap">
-      <h2 hidden>фильтр</h2>
-      <div class="example-blur"></div>
-      <div class="sorting-input sorting-item-1">
-        <p>Инфраструктура:</p>
-        <label>
-          <input class="check-input visually-hidden" type="checkbox" name="pool" id="pool" checked />Бассейн
-          <span class="checkbox"></span>
-        </label>
-        <label>
-          <input class="check-input visually-hidden" type="checkbox" name="parking" id="parking" />Парковка
-          <span class="checkbox"></span>
-        </label>
-        <label>
-          <input class="check-input visually-hidden" type="checkbox" name="Wi-Fi" id="Wi-Fi" />Wi-Fi
-          <span class="checkbox"></span>
-        </label>
-      </div>
-      <div class="sorting-input sorting-item-2">
-        <p>Тип жилья:</p>
-        <label>
-          <input class="check-input visually-hidden" type="checkbox" name="hotel" id="hotel" checked />Гостиница
-          <span class="checkbox"></span>
-        </label>
-        <label>
-          <input class="check-input visually-hidden" type="checkbox" name="motel" id="motel" checked />Мотель
-          <span class="checkbox"></span>
-        </label>
-        <label>
-          <input class="check-input visually-hidden" type="checkbox" name="Apartments" id="Apartments"
-            checked />Апартаменты
-          <span class="checkbox"></span>
-        </label>
-      </div>
-      <div class="sorting-input sorting-item-3">
-        <form method="get" action="https://echo.htmlacademy.ru">
+    <section class="filter">
+      <h2 class="visually-hidden">фильтр</h2>
+      <form class="sorting-wrap" method="get" action="https://echo.htmlacademy.ru">
+        <div class="blur"></div>
+        <div class="sorting-input sorting-item-1">
+          <p>Инфраструктура:</p>
+          <label>
+            <input class="check-input visually-hidden" type="checkbox" name="pool" id="pool" checked />Бассейн
+            <span class="checkbox"></span>
+          </label>
+          <label>
+            <input class="check-input visually-hidden" type="checkbox" name="parking" id="parking" />Парковка
+            <span class="checkbox"></span>
+          </label>
+          <label>
+            <input class="check-input visually-hidden" type="checkbox" name="Wi-Fi" id="Wi-Fi" />Wi-Fi
+            <span class="checkbox"></span>
+          </label>
+        </div>
+        <div class="sorting-input sorting-item-2">
+          <p>Тип жилья:</p>
+          <label>
+            <input class="check-input visually-hidden" type="checkbox" name="hotel" id="hotel" checked />Гостиница
+            <span class="checkbox"></span>
+          </label>
+          <label>
+            <input class="check-input visually-hidden" type="checkbox" name="motel" id="motel" checked />Мотель
+            <span class="checkbox"></span>
+          </label>
+          <label>
+            <input class="check-input visually-hidden" type="checkbox" name="Apartments" id="Apartments"
+              checked />Апартаменты
+            <span class="checkbox"></span>
+          </label>
+        </div>
+        <div class="sorting-input sorting-item-3">
           <fieldset class="filter-item">
             <legend>Стоимость в сутки (Р):</legend>
             <div class="range-filter">
               <div class="price-controls">
-                <label class="price min-price"><input type="number" name="min-price" min="0" max="3000" value="" placeholder="от 0"></label>
-                <label class="price max-price"><input type="number" name="max-price" min="0" max="3000" value="" placeholder="до 3000"></label>
+                <label class="price min-price"><input type="number" name="min-price" min="0" max="3000" value=""
+                    placeholder="от 0"></label>
+                <label class="price max-price"><input type="number" name="max-price" min="0" max="3000" value=""
+                    placeholder="до 3000"></label>
               </div>
               <div class="range-controls">
                 <div class="scale">
@@ -79,22 +81,27 @@
                 <div class="toggle toggle-min"></div>
                 <div class="toggle toggle-max"></div>
               </div>
-              <a class="button-show" href="https://echo.htmlacademy.ru/">показать</a>
+              <button  class="button-show" href="https://echo.htmlacademy.ru/">показать</и>
             </div>
           </fieldset>
-        </form>
-      </div>
+        </div>
+      </form>
     </section>
     <section class="search-results-wrap">
       <h2 hidden>результаты фильтра</h2>
       <div class="search-results-sorting">
         <h2>Найдено: 3</h2>
         <p>Сортировка:</p>
-        <!-- разобраться со списком -->
         <ul class="search-results-list">
-          <li class="item-active">По цене</li>
-          <li>По типу</li>
-          <li>По рейтингу</li>
+          <li class="item-active">
+            <p>По цене</p>
+          </li>
+          <li>
+            <p>По типу</p>
+          </li>
+          <li>
+            <p>По рейтингу</p>
+          </li>
         </ul>
         <ul class="switch">
           <li><svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">

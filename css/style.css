@@ -174,7 +174,7 @@ img {
     url(../img/backgroundphoto.png) 50% / cover no-repeat;
   width: 1200px;
   height: 509px;
-  background-color: grey;
+  background-color: var(--basic-gray-light);
   display: flex;
 }
 
@@ -242,6 +242,7 @@ img {
 
 .image-description {
   height: 256px;
+  background-color: var(--basic-gray-light);
 }
 
 /* список особенностей  */
@@ -322,7 +323,8 @@ img {
 
 .offer-service {
   text-align: center;
-  padding-top: 28px;
+  padding: 0;
+  margin-top: 45px;
 }
 
 .offer-service h2 {}
@@ -334,7 +336,6 @@ img {
   line-height: 50px;
   margin: 0;
   margin-bottom: 20px;
-  /* !разобраться с межстрочным интервалом */
 }
 
 .offer-service h2 span:last-child {
@@ -344,6 +345,18 @@ img {
   line-height: 23px;
   margin: 0;
   margin-bottom: 27px;
+}
+
+
+/*
+
+! модальное окно
+
+*/
+.popup {
+  position: relative;
+  max-width: 568px;
+  margin: 0 auto;
 }
 
 .button-offer {
@@ -357,6 +370,7 @@ img {
   color: var(--basic-white);
   background-color: var(--basic-brown);
   border: none;
+  outline: none;
 }
 
 .button-offer:hover {
@@ -368,21 +382,15 @@ img {
   color: var(--activ-text-white);
 }
 
-/*
-
-! модальное окно
-
-*/
-.popup {
-  position: relative;
-  max-width: 568px;
-  margin: 0 auto;
-}
-
 .modal {
   position: absolute;
   top: 86px;
   background-color: var(--basic-white);
+  -webkit-animation: bounce 1.5s;
+          animation: bounce 1.5s;
+}
+.modal-hide{
+  display: none;
 }
 
 .popup-form {
@@ -528,10 +536,8 @@ input::-webkit-input-placeholder {
 }
 
 .button-search {
-  outline: none;
   width: 458px;
   height: 58px;
-  vertical-align: middle;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
@@ -539,6 +545,7 @@ input::-webkit-input-placeholder {
   color: var(--basic-white);
   background-color: var(--basic-blue-light);
   border: none;
+  outline: none;
   grid-column: 1/-1;
   grid-row: 4/5;
   margin-top: 24px;
@@ -556,6 +563,10 @@ input::-webkit-input-placeholder {
 /* ! подвал */
 .map-img {
   margin-bottom: -120px;
+}
+
+.map-img img {
+  display: block;
 }
 
 .page-footer {
@@ -578,13 +589,12 @@ input::-webkit-input-placeholder {
   font-size: 21px;
   line-height: 26px;
   text-align: center;
-  /* margin-top: 15px; */
   margin-left: 72px;
 }
 
 .footer-contacts p {
   margin: 0;
-  margin-top: 16px;
+  margin-top: 23px;
   margin-bottom: 10px;
 }
 
@@ -601,7 +611,7 @@ input::-webkit-input-placeholder {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 31px 0;
+  margin: 37px 0;
 }
 
 .footer-social li {
@@ -674,11 +684,11 @@ input::-webkit-input-placeholder {
   z-index: 1;
   display: grid;
   grid-template-columns: 1fr 1fr 50%;
-  background-color: gray;
+  background-color: var(--basic-gray-light);
   overflow: hidden;
 }
 
-.example-blur {
+.blur {
   position: absolute;
   left: 0;
   right: 0;
@@ -753,6 +763,11 @@ input::-webkit-input-placeholder {
   background-repeat: no-repeat;
   position: absolute;
   left: 0px;
+}
+
+.check-input:checked:focus+.checkbox,
+.check-input:focus+.checkbox {
+  outline: 2px solid var(--basic-gray-light);
 }
 
 .check-input:checked+.checkbox {
@@ -885,13 +900,14 @@ input[type="number"]::-webkit-inner-spin-button {
   display: inline-block;
   color: var(--basic-white);
   font-size: 14px;
-  padding: 6px 35px;
+  padding: 8px 34px;
   text-align: center;
+  text-transform: uppercase;
   background-color: transparent;
   border: 2px solid var(--basic-white);
   border-radius: 2px;
   margin: 0;
-  margin-left: 84px;
+  margin-left: 85px;
   margin-top: 3px;
 }
 
@@ -939,8 +955,13 @@ input[type="number"]::-webkit-inner-spin-button {
   margin-top: 2px;
   margin-left: 40px;
 }
-
+.search-results-list p{
+  padding: 0;
+  margin: 0;
+}
 .search-results-list li {
+  height: -webkit-min-content;
+  height: -moz-min-content;
   height: min-content;
   color: var(--rest-black-rgb);
   border-bottom: 1px dashed #81B3D2;
@@ -1011,7 +1032,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .img-inner img {
   margin-left: 72px;
   margin-top: 30px;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 }
 
 .description-inner {
@@ -1085,6 +1106,8 @@ input[type="number"]::-webkit-inner-spin-button {
 .more-details {
   box-sizing: border-box;
   width: 110px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   padding: 3px 0;
   margin-top: 8px;
@@ -1105,6 +1128,8 @@ input[type="number"]::-webkit-inner-spin-button {
 .reservation {
   box-sizing: border-box;
   width: 142px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   padding: 3px 0;
   margin-top: 8px;
@@ -1126,4 +1151,24 @@ input[type="number"]::-webkit-inner-spin-button {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+/* Animations */
+
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(-86px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
