@@ -53,22 +53,15 @@ body {
   font-weight: normal;
   color: var(--basic-black-light);
   text-transform: uppercase;
-  background-color: var(--basic-white);
+  background-color: var(--basic-color-site);
 }
 
-/* !серая граница сайта */
 .page {
   height: 100%;
-  background-color: var(--basic-black);
 }
 
 .page-body {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
-
+  height: 100%;
 }
 
 a {
@@ -80,11 +73,22 @@ img {
   height: auto;
 }
 
+.content-wrap {
+  min-height: 100%;
+  width: 1200px;
+  display: grid;
+  margin: 0 auto;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  background-color: white;
+  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+}
+
 /* главная навигация */
 .main-header {
-  width: 1200px;
   height: 56px;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
 }
 
@@ -112,10 +116,7 @@ img {
 
 .site-navigation .site-navigation-current {
   color: var(--basic-brown);
-  /* ! поставить классы на ссылки */
 }
-
-/* интерактив */
 
 .site-navigation a:hover {
   color: var(--hover-text-blue);
@@ -146,8 +147,6 @@ img {
 }
 
 .main-header-logo {
-  /*   outline: 5px solid rgb(0, 0, 0);
-  outline-offset: -5px; */
   position: absolute;
   width: 138px;
   height: 70px;
@@ -158,12 +157,9 @@ img {
 /* !основной контент main */
 
 .conteiner {
-  /*  outline: 5px solid rgb(255, 0, 0);
-  outline-offset: -5px; */
   width: 1200px;
   margin: 0 auto;
   padding: 0;
-  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 /*  приветсвие */
@@ -210,8 +206,6 @@ img {
 .text-image-description {
   display: flex;
 }
-
-/* текст на синем фоне */
 
 .main-text-description {
   background-color: var(--basic-blue-light);
@@ -281,8 +275,6 @@ img {
 
 .picture {}
 
-/* серый фон */
-
 .wrap {
   background-color: var(--basic-gray-light);
 }
@@ -319,15 +311,30 @@ img {
   margin-bottom: 53px;
 }
 
-/* предложение */
+/* предложение  поиска гостиницы*/
 
 .offer-service {
   text-align: center;
   padding: 0;
-  margin-top: 45px;
+  padding-top: 27px;
+  position: relative;
+  z-index: 2;
 }
 
-.offer-service h2 {}
+.offer-service::before {
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: #ffffff;
+  position: absolute;
+}
+
+.offer-service h2 {
+  position: relative;
+  z-index: 5;
+}
 
 .offer-service h2 span:first-child {
   display: inline-block;
@@ -344,7 +351,7 @@ img {
   font-size: 14px;
   line-height: 23px;
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 29px;
 }
 
 
@@ -355,6 +362,7 @@ img {
 */
 .popup {
   position: relative;
+
   max-width: 568px;
   margin: 0 auto;
 }
@@ -371,6 +379,8 @@ img {
   background-color: var(--basic-brown);
   border: none;
   outline: none;
+  position: relative;
+  z-index: 5;
 }
 
 .button-offer:hover {
@@ -386,11 +396,15 @@ img {
   position: absolute;
   top: 86px;
   background-color: var(--basic-white);
-  -webkit-animation: bounce 1.5s;
-          animation: bounce 1.5s;
+  opacity: .99;
+  transition: all 1s;
+  z-index: -1;
+  transform: translateY(0);
 }
-.modal-hide{
-  display: none;
+
+.modal-hide {
+  opacity: 0;
+  transform: translateY(-308px);
 }
 
 .popup-form {
@@ -432,11 +446,13 @@ img {
 input::-moz-placeholder {
   color: inherit;
   text-transform: uppercase;
+  opacity: 1;
 }
 
 input::-webkit-input-placeholder {
   color: inherit;
   text-transform: uppercase;
+  opacity: 1;
 }
 
 .input-1 {
@@ -465,6 +481,7 @@ input::-webkit-input-placeholder {
 
 .search-hotel-item {
   position: relative;
+  color: #000000;
 }
 
 .calendar {
@@ -560,7 +577,6 @@ input::-webkit-input-placeholder {
   color: var(--activ-text-white);
 }
 
-/* ! подвал */
 .map-img {
   margin-bottom: -120px;
 }
@@ -569,12 +585,20 @@ input::-webkit-input-placeholder {
   display: block;
 }
 
+/* ! футер */
+
 .page-footer {
   width: 1200px;
   margin: 0 auto;
   padding: 0;
-  background-color: var(--basic-color-footer);
   color: var(--basic-black);
+  background-color: var(--basic-color-footer);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.inner-footer {
+  border-top: 1px solid #E5E5E5;
+  ;
 }
 
 .main-footer {
@@ -611,7 +635,7 @@ input::-webkit-input-placeholder {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 37px 0;
+  margin-top: 37px;
 }
 
 .footer-social li {
@@ -676,7 +700,7 @@ input::-webkit-input-placeholder {
 .copyright-link {}
 
 /* ! внутренняя страница */
-/* * форма ввода */
+
 .inner-conteiner {}
 
 .sorting-wrap {
@@ -871,11 +895,11 @@ input::-webkit-input-placeholder {
   text-align: center;
   color: var(--basic-white);
   border: none;
+  outline: none;
   border-radius: 2px;
   background: transparent;
 }
 
-/* * убрал стрелочки в поле */
 input[type="number"] {
   -moz-appearance: textfield;
 }
@@ -884,7 +908,6 @@ input[type="number"]::-webkit-inner-spin-button {
   display: none;
 }
 
-/* *вертикальная граница */
 .price-controls::before {
   content: "";
   width: 2px;
@@ -916,7 +939,7 @@ input[type="number"]::-webkit-inner-spin-button {
   background-color: var(--basic-white);
 }
 
-/* * результаты */
+
 .search-results-wrap {}
 
 .search-results-sorting {
@@ -955,10 +978,12 @@ input[type="number"]::-webkit-inner-spin-button {
   margin-top: 2px;
   margin-left: 40px;
 }
-.search-results-list p{
+
+.search-results-list p {
   padding: 0;
   margin: 0;
 }
+
 .search-results-list li {
   height: -webkit-min-content;
   height: -moz-min-content;
@@ -1022,16 +1047,13 @@ input[type="number"]::-webkit-inner-spin-button {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  border-bottom: 1px solid #E5E5E5;
-}
-
-.item-results:first-child {
   border-top: 1px solid #E5E5E5;
+  padding: 3px 0;
 }
 
 .img-inner img {
   margin-left: 72px;
-  margin-top: 30px;
+  margin-top: 26px;
   margin-bottom: 23px;
 }
 
@@ -1042,7 +1064,7 @@ input[type="number"]::-webkit-inner-spin-button {
   display: grid;
   grid-template-columns: 115px 140px;
   grid-template-rows: 30px 30px 30px;
-  margin-top: 25px;
+  margin-top: 20px;
   margin-left: 30px;
 }
 
@@ -1065,6 +1087,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .description-inner p {
   margin: 0;
+  padding-top: 2px;
 }
 
 .rating-wrap {
@@ -1084,7 +1107,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .stars li {
   padding-left: 6px;
-  margin-bottom: 11px;
+  margin-bottom: 17px;
 }
 
 .rating {
@@ -1092,7 +1115,7 @@ input[type="number"]::-webkit-inner-spin-button {
   min-width: 110px;
   text-align: center;
   background-color: var(--basic-color-site);
-  margin-bottom: 31px;
+  margin-bottom: 29px;
 }
 
 .rating p {
@@ -1100,9 +1123,6 @@ input[type="number"]::-webkit-inner-spin-button {
   padding: 3px 0;
 }
 
-
-
-/* !выровнять текст */
 .more-details {
   box-sizing: border-box;
   width: 110px;
@@ -1110,7 +1130,7 @@ input[type="number"]::-webkit-inner-spin-button {
   height: -moz-max-content;
   height: max-content;
   padding: 3px 0;
-  margin-top: 8px;
+  margin-top: 9px;
   text-align: center;
   color: var(--basic-white);
   background-color: var(--basic-blue-light);
@@ -1132,7 +1152,7 @@ input[type="number"]::-webkit-inner-spin-button {
   height: -moz-max-content;
   height: max-content;
   padding: 3px 0;
-  margin-top: 8px;
+  margin-top: 9px;
   text-align: center;
   color: var(--basic-white);
   background-color: var(--basic-brown);
@@ -1151,24 +1171,4 @@ input[type="number"]::-webkit-inner-spin-button {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-/* Animations */
-
-@-webkit-keyframes bounce {
-  0% {
-    transform: translateY(-86px);
-  }
-
-  70% {
-    transform: translateY(30px);
-  }
-
-  90% {
-    transform: translateY(-10px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
 }
