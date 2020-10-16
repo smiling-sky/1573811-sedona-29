@@ -400,6 +400,7 @@ img {
   transition: all 1s;
   z-index: -1;
   transform: translateY(0);
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
 }
 
 .modal-hide {
@@ -579,15 +580,19 @@ input::-webkit-input-placeholder {
 
 .map-img {
   margin-bottom: -120px;
+  width: 1200px;
+  height: 594px;
+  background-image: url(/img/map.jpg);
 }
 
-.map-img img {
+.map-img iframe {
   display: block;
 }
 
 /* ! футер */
 
 .page-footer {
+  position: relative;
   width: 1200px;
   margin: 0 auto;
   padding: 0;
@@ -635,7 +640,7 @@ input::-webkit-input-placeholder {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 37px;
+  margin-top: 34px;
 }
 
 .footer-social li {

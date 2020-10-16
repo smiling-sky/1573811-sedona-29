@@ -139,10 +139,11 @@
           <div class="modal ">
             <h2 class="visually-hidden">поиск гостиницы в седоне</h2>
             <div class="popup-form ">
-              <form class="search-hotel-form" action="blank.html" method="get">
+              <form class="search-hotel-form" action="https://echo.htmlacademy.ru/" method="get">
                 <p class="search-hotel-item search-hotel-item-big input-1">
                   <label class="label-arrival-date" for="arrival-date">Дата заезда:</label>
-                  <input id="arrival-date" type="text" name="date" placeholder="24 АПРЕЛЯ 2017">
+                  <input class="input-arrival-date" id="arrival-date" type="text" name="date"
+                    placeholder="24 АПРЕЛЯ 2017">
                   <svg class="calendar" width="21" height="23" viewBox="0 0 21 23" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -155,7 +156,8 @@
                 </p>
                 <p class="search-hotel-item search-hotel-item-big input-2">
                   <label class="label-of-departure" for="date-of-departure">Дата выезда:</label>
-                  <input id="date-of-departure" type="text" name="date" placeholder="4 ИЮЛЯ 2017">
+                  <input class="input-of-departure" id="date-of-departure" type="text" name="date"
+                    placeholder="4 ИЮЛЯ 2017">
                   <svg class="calendar" width="21" height="23" viewBox="0 0 21 23" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -168,7 +170,7 @@
                 </p>
                 <p class="search-hotel-item search-hotel-item-small input-3">
                   <label class="label-adults" for="adults">Взрослые:</label>
-                  <input id="adults" type="text" name="adults" placeholder="2">
+                  <input class="input-adults" id="adults" type="text" name="adults" placeholder="2">
                   <svg class="minus" width="12" height="3" viewBox="0 0 12 3" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <rect width="12" height="3" fill="#A9A9A9" />
@@ -182,7 +184,7 @@
                 </p>
                 <p class="search-hotel-item search-hotel-item-small input-4">
                   <label class="label-children" for="children">Дети:</label>
-                  <input id="children" type="text" name="adults" placeholder="0">
+                  <input class="input-children" id="children" type="text" name="children" placeholder="0">
                   <svg class="minus" width="12" height="3" viewBox="0 0 12 3" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <rect width="12" height="3" fill="#A9A9A9" />
@@ -194,7 +196,7 @@
                       fill="#A9A9A9" />
                   </svg>
                 </p>
-                <button type="button" class="button-search">найти</button>
+                <button class="button-search" type="submit">найти</button>
               </form>
             </div>
           </div>
@@ -202,7 +204,10 @@
 
       </div>
       <div class="map-img">
-        <img src="img/map.jpg" alt="карта городка Седона" width="1200" height="594" />
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.13565774217!2d-111.83015786266728!3d34.85444381528353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sby!4v1602871163684!5m2!1sru!2sby"
+          width="1200" height="594" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+          tabindex="0"></iframe>
       </div>
     </main>
     <footer class="page-footer">
