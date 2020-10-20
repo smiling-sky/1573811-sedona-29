@@ -338,6 +338,7 @@ img {
 
 .offer-service h2 span:first-child {
   display: inline-block;
+  vertical-align: middle;
   font-weight: bold;
   font-size: 30px;
   line-height: 50px;
@@ -347,6 +348,7 @@ img {
 
 .offer-service h2 span:last-child {
   display: inline-block;
+  vertical-align: middle;
   font-weight: normal;
   font-size: 14px;
   line-height: 23px;
@@ -926,6 +928,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .button-show {
   display: inline-block;
+  vertical-align: middle;
   color: var(--basic-white);
   font-size: 14px;
   padding: 8px 34px;
