@@ -5,12 +5,12 @@
   <meta charset="utf-8" />
   <title>HTML Academy:Гостиницы Седоны</title>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/normalize.min.css" />
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
 <body class="page-body inner-body">
- <div class="content-wrap">
+  <div class="content-wrap">
     <header class="main-header conteiner">
       <nav class="main-navigation">
         <ul class="site-navigation site-navigation-first">
@@ -82,7 +82,7 @@
                   <div class="toggle toggle-min"></div>
                   <div class="toggle toggle-max"></div>
                 </div>
-                <button  class="button-show" formaction="https://echo.htmlacademy.ru/">показать</button>
+                <button class="button-show" formaction="https://echo.htmlacademy.ru/">показать</button>
               </div>
             </fieldset>
           </div>
@@ -95,24 +95,29 @@
           <p>Сортировка:</p>
           <ul class="search-results-list">
             <li class="item-active">
-              <p>По цене</p>
+              <a href="#" aria-label="сортировка по цене">По цене</a>
             </li>
             <li>
-              <p>По типу</p>
+              <a href="#" aria-label="сортировка по типу">По типу</a>
             </li>
             <li>
-              <p>По рейтингу</p>
+              <a href="#" aria-label="сортировка по рейтингу">По рейтингу</a>
             </li>
           </ul>
           <ul class="switch">
-            <li><svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA" />
-              </svg>
+            <li>
+              <a href="#" aria-label="сортировка по возврастанию">
+                <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA" />
+                </svg>
+              </a>
             </li>
-            <li class="switch-current"><svg width="11" height="10" viewBox="0 0 11 10" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA" />
-              </svg>
+            <li class="switch-current">
+              <a href="#" aria-label="сортировка по убыванию">
+                <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA" />
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
@@ -130,10 +135,14 @@
             </div>
             <div class="rating-wrap">
               <ul class="stars stars-1">
-                <li><img src="img/star.png" alt="рейтинг" width="18" height="17"></li>
-                <li><img src="img/star.png" alt="рейтинг" width="18" height="17"></li>
-                <li><img src="img/star.png" alt="рейтинг" width="18" height="17"></li>
-                <li><img src="img/star.png" alt="рейтинг" width="18" height="17"></li>
+                <li><a href="#" aria-label="рейтинг четыре звезды"><img src="img/star.png" alt="рейтинг" width="18"
+                      height="17"></a></li>
+                <li><a href="#" aria-label="рейтинг три звезды"><img src="img/star.png" alt="рейтинг" width="18"
+                      height="17"></a></li>
+                <li><a href="#" aria-label="рейтинг две звезды"><img src="img/star.png" alt="рейтинг" width="18"
+                      height="17"></a></li>
+                <li><a href="#" aria-label="рейтинг одна звезда"><img src="img/star.png" alt="рейтинг" width="18"
+                      height="17"></a></li>
               </ul>
               <div class="rating">
                 <p>Рейтинг: 8,5</p>
@@ -153,9 +162,12 @@
             </div>
             <div class="rating-wrap">
               <ul class="stars stars-2">
-                <li><img src="img/star.png" alt="рейтинг" width="18" height="17"></li>
-                <li><img src="img/star.png" alt="рейтинг" width="18" height="17"></li>
-                <li><img src="img/star.png" alt="рейтинг" width="18" height="17"></li>
+                <li><a href="#" aria-label="рейтинг три звезды"><img src="img/star.png" alt="рейтинг" width="18"
+                      height="17"></a></li>
+                <li><a href="#" aria-label="рейтинг две звезды"><img src="img/star.png" alt="рейтинг" width="18"
+                      height="17"></a></li>
+                <li><a href="#" aria-label="рейтинг одна звезда"><img src="img/star.png" alt="рейтинг" width="18"
+                      height="17"></a></li>
               </ul>
               <div class="rating">
                 <p>Рейтинг: 8,9</p>
@@ -175,8 +187,10 @@
             </div>
             <div class="rating-wrap">
               <ul class="stars stars-3">
-                <li><img src="img/star.png" alt="рейтинг" width="18" height="17"></li>
-                <li><img src="img/star.png" alt="рейтинг" width="18" height="17"></li>
+                <li><a href="#" aria-label="рейтинг две звезды"><img src="img/star.png" alt="рейтинг" width="18"
+                      height="17"></a></li>
+                <li><a href="#" aria-label="рейтинг одна звезда"><img src="img/star.png" alt="рейтинг" width="18"
+                      height="17"></a></li>
               </ul>
               <div class="rating">
                 <p>Рейтинг: 9,2</p>
@@ -241,7 +255,7 @@
         </div>
       </div>
     </footer>
- </div>
+  </div>
 </body>
 
 </html>

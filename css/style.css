@@ -16,8 +16,13 @@
   --basic-brown: #766357;
   --basic-color-footer: rgba(255, 255, 255, 0.9);
   --basic-color-site: #f2f2f2;
+  --color-backgroundimage: rgba(61,119,164,0.6);
+  --border-white: #E5E5E5;
+  --toggle:#ababab;
+  --shadow-toggle: #cfcfcf;
+  --shadow-footer: rgba(0, 0, 0, 0.25);
+  --shadow-modal: rgba(0, 1, 1, 0.15);
 
-  /* цвета для интерактивных действий */
 
   /* покой*/
   --rest-black-rgb: rgba(0, 0, 0, 0.3);
@@ -81,7 +86,7 @@ img {
   grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
-  background-color: white;
+  background-color:var(--basic-white);
   box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
 
@@ -170,7 +175,7 @@ img {
     url(../img/backgroundphoto.png) 50% / cover no-repeat;
   width: 1200px;
   height: 509px;
-  background-color: var(--basic-gray-light);
+  background-color: var(--color-backgroundimage);
   display: flex;
 }
 
@@ -327,7 +332,7 @@ img {
   right: 0;
   bottom: 0;
   top: 0;
-  background-color: #ffffff;
+  background-color: var(--basic-white);
   position: absolute;
 }
 
@@ -385,7 +390,8 @@ img {
   z-index: 5;
 }
 
-.button-offer:hover {
+.button-offer:hover,
+.button-offer:focus {
   background-color: var(--hover-btn-brown);
 }
 
@@ -402,7 +408,7 @@ img {
   transition: all 1s;
   z-index: -1;
   transform: translateY(0);
-  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  box-shadow: 0px 7px 15px var(--shadow-modal);
 }
 
 .modal-hide {
@@ -431,11 +437,11 @@ img {
 }
 
 .label-adults {
-  margin-right: 38px;
+  margin-right: 43px;
 }
 
 .label-children {
-  margin-right: 22px;
+  margin-right: 27px;
 }
 
 .search-hotel-form {
@@ -474,49 +480,63 @@ input::-webkit-input-placeholder {
   grid-column: 1/ 2;
   grid-row: 3/4;
   justify-self: end;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 
 .input-4 {
   grid-column: 2/ 3;
   grid-row: 3/4;
   justify-self: end;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 
 .search-hotel-item {
   position: relative;
-  color: #000000;
+  color: var(--basic-black);
 }
-
-.calendar {
+.btn-calendar{
   position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+  right: 0px;
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
+  min-height: 38px;
+  padding: 0 10px;
+  background-color: inherit;
+  border:none;
+  outline: none;
 }
-
+.btn-minus{
+  position: relative;
+}
 .minus {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 90px;
+  right: 12px;
 }
 
 .plus {
-  position: absolute;
-  right: 13px;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .calendar:hover path,
-.plus:hover path,
-.minus:hover rect {
+.btn-input:hover path,
+.btn-input:hover rect {
+  fill: var(--basic-black);
+}
+.btn-calendar:focus path,
+.btn-input:focus path,
+.btn-input:focus rect {
   fill: var(--basic-black);
 }
 
 .calendar:active path,
-.plus:active path,
-.minus:active rect {
+.btn-input:active path,
+.btn-input:active rect {
   fill: var(--basic-blue-light);
 }
 
@@ -541,7 +561,7 @@ input::-webkit-input-placeholder {
 
 .search-hotel-item input:active {
   background-color: var(--basic-white);
-  border: 2px solid #E5E5E5;
+  border: 2px solid var(--border-white);
 }
 
 .search-hotel-item-big input {
@@ -550,9 +570,17 @@ input::-webkit-input-placeholder {
 }
 
 .search-hotel-item-small input {
-  width: 115px;
-  padding: 0 40px;
+  width: 38px;
+  padding: 0;
   text-align: center;
+}
+.btn-input{
+  width: 38px;
+  height: 38px;
+  border: none;
+  outline: none;
+  text-align: center;
+  background-color: var(--rest-input)
 }
 
 .button-search {
@@ -571,7 +599,8 @@ input::-webkit-input-placeholder {
   margin-top: 24px;
 }
 
-.button-search:hover {
+.button-search:hover,
+.button-search:focus {
   background-color: var(--hover-btn-blue);
 }
 
@@ -600,11 +629,11 @@ input::-webkit-input-placeholder {
   padding: 0;
   color: var(--basic-black);
   background-color: var(--basic-color-footer);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px var(--shadow-footer);
 }
 
 .inner-footer {
-  border-top: 1px solid #E5E5E5;
+  border-top: 1px solid var(--border-white);
   ;
 }
 
@@ -715,7 +744,7 @@ input::-webkit-input-placeholder {
   z-index: 1;
   display: grid;
   grid-template-columns: 1fr 1fr 50%;
-  background-color: var(--basic-gray-light);
+  background-color: var(--color-backgroundimage);
   overflow: hidden;
 }
 
@@ -864,9 +893,9 @@ input::-webkit-input-placeholder {
   height: 3px;
   padding: 0;
   border: 8px solid var(--basic-white);
-  background-color: #ababab;
+  background-color: var(--toggle);
   border-radius: 50%;
-  box-shadow: 0 2px 1px 0 #cfcfcf;
+  box-shadow: 0 2px 1px 0 var(--shadow-toggle);
   cursor: pointer;
 }
 
@@ -987,7 +1016,8 @@ input[type="number"]::-webkit-inner-spin-button {
   margin-left: 40px;
 }
 
-.search-results-list p {
+.search-results-list a {
+  color: inherit;
   padding: 0;
   margin: 0;
 }
@@ -997,7 +1027,7 @@ input[type="number"]::-webkit-inner-spin-button {
   height: -moz-min-content;
   height: min-content;
   color: var(--rest-black-rgb);
-  border-bottom: 1px dashed #81B3D2;
+  border-bottom: 1px dashed var(--hover-text-blue);
 }
 
 .search-results-list li:hover {
@@ -1055,7 +1085,7 @@ input[type="number"]::-webkit-inner-spin-button {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  border-top: 1px solid #E5E5E5;
+  border-top: 1px solid var(--border-white);
   padding: 3px 0;
 }
 
@@ -1179,4 +1209,56 @@ input[type="number"]::-webkit-inner-spin-button {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+
+/* анимация  ошибки */
+
+.modal-error {
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }

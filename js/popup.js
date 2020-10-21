@@ -23,12 +23,14 @@ button.addEventListener("click", function (evt) {
   console.log("клик по поиску гостиницы");
   evt.preventDefault();
   modal.classList.toggle("modal-hide");
+  modal.classList.remove("modal-error");
 });
 
 formInput.addEventListener("submit", function (evt) {
   if (!departure.value || !arrival.value || !inputAdults.value || !inputChildren.value) {
     evt.preventDefault();
     console.log(" Нужно заполнить все поля ");
+    modal.classList.add("modal-error");
   } else {
     if (storageAdultsSupport) {
       localStorage.setItem("adults", inputAdults.value);
